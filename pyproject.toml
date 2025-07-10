@@ -9,7 +9,3 @@ dependencies = [
     "httpx>=0.28.1",
     "mcp[cli]>=1.10.1",
 ]
-
-[tool.uv]
-# Optional but good practice to pin a compatible Python version for uv
-python = "3.11"
