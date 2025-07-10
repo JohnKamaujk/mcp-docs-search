@@ -1,6 +1,7 @@
 import json
 from mcp.server.fastmcp import FastMCP
 from dotenv import load_dotenv
+from bs4 import BeautifulSoup
 import httpx
 import os
 
@@ -40,6 +41,16 @@ async def search_web(query: str) -> dict:
     except (httpx.TimeoutException, httpx.RequestError) as e:
         print(f"⚠️ SERPER API request failed: {e}")
         return {"organic": []}
+    
+async def fetch_url(url: str):
+  async with httpx.AsyncClient() as client:
+        try:
+            response = await client.get(url, timeout=30.0)
+            soup = BeautifulSoup(response.text, "html.parser")
+            text = soup.get_text()
+            return text
+        except httpx.TimeoutException:
+            return "Timeout error"
 
 def main():
     print("Hello from mcp-docs-search!")
