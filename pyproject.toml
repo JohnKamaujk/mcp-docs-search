@@ -1,0 +1,15 @@
+[project]
+name = "mcp-docs-search"
+version = "0.1.0"
+description = "An MCP server that indexes and retrieves the latest code implementation examples from LLM libraries like OpenAI, Gemini, and Llama."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    "httpx>=0.28.1",
+    "mcp[cli]>=1.10.1",
+]
+
+[tool.uv]
+# Optional but good practice to pin a compatible Python version for uv
+python = "3.11"
