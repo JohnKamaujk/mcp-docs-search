@@ -1,4 +1,4 @@
-# mcp-docs-search# MCP Server Example
+# mcp-docs-search
 
 The code in this repository demonstrates how to build a functional MCP server that can integrate with various LLM clients.
 
