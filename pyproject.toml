@@ -1,7 +1,7 @@
 [project]
 name = "mcp-docs-search"
 version = "0.1.0"
-description = "An MCP server that indexes and retrieves the latest code implementation examples from LLM libraries like OpenAI, Gemini, and Llama."
+description = "An MCP server that indexes and retrieves the latest code implementation examples from LLM libraries like OpenAI, langchain, and Llama."
 readme = "README.md"
 requires-python = ">=3.11"
 
